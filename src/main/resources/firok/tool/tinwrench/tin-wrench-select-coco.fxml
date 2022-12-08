@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.controlsfx.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="firok.tool.tinwrench.selectcoco.SelectCocoController"
+          fx:id="base">
+    <padding>
+        <Insets top="5" bottom="5" left="8" right="8"/>
+    </padding>
+    <hgap>5</hgap>
+    <vgap>8</vgap>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0"
+           GridPane.hgrow="NEVER"
+           text="标签文件"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"
+               GridPane.hgrow="ALWAYS"
+               fx:id="labelFileLabel"
+               editable="false"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="0"
+            GridPane.hgrow="NEVER"
+            text="选择"
+            onMouseClicked="#clickSelectFileLabel"/>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1"
+           GridPane.hgrow="NEVER"
+           text="图片目录"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"
+               GridPane.hgrow="ALWAYS"
+               fx:id="labelFolderImage"
+               editable="false"/>
+    <Button GridPane.columnIndex="2" GridPane.rowIndex="1"
+            GridPane.hgrow="NEVER"
+            text="选择"
+            onMouseClicked="#clickSelectFolderImage"/>
+
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="2"
+          GridPane.columnSpan="3"
+          alignment="CENTER_RIGHT" spacing="5">
+        <Button text="确定" onMouseClicked="#clickConfirm"/>
+        <Button text="取消" onMouseClicked="#clickCancel"/>
+    </HBox>
+</GridPane>

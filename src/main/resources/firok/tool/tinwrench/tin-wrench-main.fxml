@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.controlsfx.control.*?>
+
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="firok.tool.tinwrench.main.TinWrenchController">
+    <top>
+        <MenuBar HBox.hgrow="ALWAYS" fx:id="mb">
+            <Menu text="文件" fx:id="menuFile">
+                <MenuItem text="加载 COCO 数据集" onAction="#onLoadCocoDataset"/>
+                <SeparatorMenuItem/>
+            </Menu>
+            <Menu text="视图">
+                <MenuItem text="放大"/>
+                <MenuItem text="缩小"/>
+                <MenuItem text="原始比例"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="显示全部类型" onAction="#checkAllCate"/>
+                <MenuItem text="隐藏全部类型" onAction="#uncheckAllCate"/>
+                <MenuItem text="反选全部类型" onAction="#toggleAllCate"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="移动至所选实例" onAction="#moveToSelectedAnno"/>
+                <MenuItem text="显示全部实例" onAction="#checkAllAnno"/>
+                <MenuItem text="隐藏全部实例" onAction="#uncheckAllAnno"/>
+                <MenuItem text="反选全部实例" onAction="#toggleAllAnno"/>
+            </Menu>
+            <Menu text="其它">
+                <MenuItem text="清空历史记录" onAction="#clearHistory"/>
+                <MenuItem text="About" onAction="#showAbout" visible="false"/>
+                <MenuItem text="Check on GitHub" onAction="#showGithub" visible="false"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <SplitPane>
+
+            <SplitPane orientation="VERTICAL" fx:id="baseSideList" SplitPane.resizableWithParent="false">
+                <VBox>
+                    <Label text="图片"/>
+                    <ListView fx:id="fxListImage"/>
+                </VBox>
+                <VBox>
+                    <Label text="类型"/>
+                    <CheckListView fx:id="fxListCate"/>
+                </VBox>
+                <VBox>
+                    <Label text="实例"/>
+                    <CheckListView fx:id="fxListAnno"/>
+                </VBox>
+            </SplitPane>
+
+            <ScrollPane fx:id="spImage">
+                <Pane fx:id="paneImage">
+                    <ImageView fx:id="iv"/>
+                </Pane>
+            </ScrollPane>
+        </SplitPane>
+    </center>
+</BorderPane>
