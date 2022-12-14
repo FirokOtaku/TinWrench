@@ -49,6 +49,7 @@ class LoadCocoThread extends Thread
 		catch (Exception any)
 		{
 			any.printStackTrace(System.err);
+			controller.isReactive = true;
 			return;
 		}
 

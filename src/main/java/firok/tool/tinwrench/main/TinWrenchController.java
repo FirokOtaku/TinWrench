@@ -380,7 +380,7 @@ public class TinWrenchController
 
 	Background BACKGROUND = new Background(
 			new BackgroundFill(
-					Color.rgb(222, 226, 227),
+					Color.rgb(37, 42, 42),
 					null,
 					null
 			)
