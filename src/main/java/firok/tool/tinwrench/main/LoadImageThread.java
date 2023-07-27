@@ -1,6 +1,6 @@
 package firok.tool.tinwrench.main;
 
-import firok.topaz.Threads;
+import firok.topaz.thread.Threads;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 

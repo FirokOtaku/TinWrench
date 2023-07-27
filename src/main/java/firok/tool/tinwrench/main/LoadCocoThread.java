@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-import static firok.topaz.Collections.mappingKeyValue;
+import static firok.topaz.general.Collections.mappingKeyValue;
 
 class LoadCocoThread extends Thread
 {

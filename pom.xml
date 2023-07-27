@@ -52,7 +52,7 @@
         <dependency>
             <groupId>firok.tool</groupId>
             <artifactId>alloy-wrench</artifactId>
-            <version>0.24.0</version>
+            <version>0.28.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.logging.log4j</groupId>

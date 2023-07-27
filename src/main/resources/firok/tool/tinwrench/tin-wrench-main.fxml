@@ -16,9 +16,9 @@
                 <SeparatorMenuItem/>
             </Menu>
             <Menu text="视图">
-                <MenuItem text="放大"/>
-                <MenuItem text="缩小"/>
-                <MenuItem text="原始比例"/>
+                <MenuItem text="放大 (未实现)"/>
+                <MenuItem text="缩小 (未实现)"/>
+                <MenuItem text="原始比例 (未实现)"/>
                 <SeparatorMenuItem/>
                 <MenuItem text="显示全部类型" onAction="#checkAllCate"/>
                 <MenuItem text="隐藏全部类型" onAction="#uncheckAllCate"/>
@@ -31,8 +31,8 @@
             </Menu>
             <Menu text="其它">
                 <MenuItem text="清空历史记录" onAction="#clearHistory"/>
-                <MenuItem text="About" onAction="#showAbout" visible="false"/>
-                <MenuItem text="Check on GitHub" onAction="#showGithub" visible="false"/>
+<!--                <MenuItem text="About" onAction="#showAbout" visible="false"/>-->
+                <MenuItem text="Check on GitHub" onAction="#showGithub"/>
             </Menu>
         </MenuBar>
     </top>

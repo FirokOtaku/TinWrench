@@ -1,10 +1,11 @@
 package firok.tool.tinwrench.main;
 
 import firok.tool.alloywrench.bean.CocoData;
+import firok.tool.tinwrench.TinWrench;
 import firok.tool.tinwrench.selectcoco.SelectCocoDialog;
 import firok.tool.tinwrench.selectcoco.SelectCocoResult;
-import firok.topaz.Maths;
-import firok.topaz.Threads;
+import firok.topaz.math.Maths;
+import firok.topaz.thread.Threads;
 import javafx.application.Platform;
 import javafx.beans.Observable;
 import javafx.beans.value.ObservableValue;
@@ -30,6 +31,8 @@ import org.controlsfx.dialog.ExceptionDialog;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.URI;
+import java.net.URL;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -421,6 +424,7 @@ public class TinWrenchController
 	@FXML
 	void showGithub()
 	{
-		;
+		try { java.awt.Desktop.getDesktop().browse(new URI(TinWrench.LINK)); }
+		catch (Exception ignored) { }
 	}
 }

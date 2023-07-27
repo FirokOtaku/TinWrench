@@ -13,6 +13,7 @@ open module firok.tool.tinwrench {
 //	requires org.graalvm.truffle;
 
 	requires firok.topaz;
+	requires java.desktop;
 
 //	opens firok.tool.tinwrench to javafx.fxml;
 	exports firok.tool.tinwrench.main;
